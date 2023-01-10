@@ -1,26 +1,51 @@
-import React from "react";
-import { Button, View, Text, Image, StyleSheet, ScrollView } from "react-native";
+import { Button, View, Text, Image, StyleSheet, ScrollView, Alert } from "react-native";
+import React, { useState, useEffect } from 'react';
 
 
 export default function AboutScreen({ navigation }) {
 
- 
-  
+  useEffect(() => {
+    navigation.addListener("beforeRemove", (e) => {
+       if(e.data.action.type !="GO_BACK") {
+         return ;
+        } else {
+      e.preventDefault();
+      Alert.alert(
+        "¿Desea cerrar sesión?",
+        "Presione OK para salir",
+        [
+          {
+            text: "Cancel",
+            onPress: () => console.log("Presionaste cancelar"),
+          },
+          { text: "OK", onPress: () => navigation.navigate("Login") }
+        ]
+      );
+     }
+    });
+}, [navigation]);
+
   return (
+
+    
+    
+    
     <ScrollView>
     <Image
     source={{
       uri: 'https://bde04f90fcbcc7b99af9-a4cf3e88ec567f5b6c6819f1d482f77f.ssl.cf1.rackcdn.com/5_750_r_0.jpg?v=1344',}}
-      style={{height:200, width: 400}} />
+      style={{height:200, width: 200}} />
     <Button
         title="Reservar"
-        onPress={() => navigation.navigate("Pantalla 3")}/>
+        style={{width: 200}}
+        onPress={() => navigation.navigate("Factura")}/>
+        
   <Image
   source={{ uri: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/339941744.jpg?k=5ee1b091f5498cea0aebbe453f015596d0ad69445be1fc35c41e70a7c6964169&o=&hp=1',}}
     style={{height:200, width: 400}} />
     <Button
         title="Reservar"
-        onPress={() => navigation.navigate("Pantalla 3")}/>
+        onPress={() => navigation.navigate("Factura")}/>
   <Image
     source={{
       uri: 'https://photo620x400.mnstatic.com/20f655373bbada0209346788a1efbb29/restaurante-el-paraiso.jpg',}}
@@ -28,7 +53,7 @@ export default function AboutScreen({ navigation }) {
 
     <Button
         title="Reservar"
-        onPress={() => navigation.navigate("Pantalla 3")}/>
+        onPress={() => navigation.navigate("Factura")}/>
 
   <Image
     source={{
@@ -37,7 +62,7 @@ export default function AboutScreen({ navigation }) {
 
     <Button
         title="Reservar"
-        onPress={() => navigation.navigate("Pantalla 3")}/>
+        onPress={() => navigation.navigate("Factura")}/>
 
   </ScrollView>
   

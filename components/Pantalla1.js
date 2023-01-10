@@ -1,11 +1,8 @@
 import { Text, TextInput, View, StyleSheet, Button, Alert } from 'react-native';
-import { Appbar } from 'react-native-paper';
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { initializeApp } from "firebase/app";
 import { firebaseConfig } from './firebase-config';
-import React from "react";
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import React, { useState, useEffect } from 'react';
 
 
 export default function Login({navigation}){
@@ -26,7 +23,7 @@ export default function Login({navigation}){
     .then((userCredential) => {
 
       const user=userCredential.user;
-      navigation.navigate("Pantalla 2")
+      navigation.navigate("Reserva")
      
   
     })
