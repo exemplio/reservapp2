@@ -1,8 +1,36 @@
-import { Button, View, Text, Image, StyleSheet, ScrollView, Alert } from "react-native";
+import { View, Text, Image, StyleSheet, 
+  ScrollView, Alert, TouchableOpacity, Button } from "react-native";
 import React, { useState, useEffect } from 'react';
+import { styles } from "../style/style.js";
 
 
 export default function AboutScreen({ navigation }) {
+ 
+  React.useEffect(() => {
+ 
+    navigation.setOptions({
+      headerRight: () => (
+        
+        <TouchableOpacity onPress={()=>Alert.alert(
+          "¿Desea cerrar sesión?",
+          "Presione OK para salir",
+          [
+            {
+              text: "Cancel",
+              onPress: () => console.log("Presionaste cancelar"),
+            },
+            { text: "OK", onPress: () => navigation.navigate("Login") }
+          ]
+        )
+        }>
+        <Image source={require('../assets/botonexit.png')}
+        style={styles.Buttonout}></Image>
+        </TouchableOpacity>
+      
+      ),
+    });
+  }, [navigation]);
+
 
   useEffect(() => {
     navigation.addListener("beforeRemove", (e) => {
@@ -28,45 +56,85 @@ export default function AboutScreen({ navigation }) {
   return (
 
     
-    
-    
-    <ScrollView>
+   
+   
+  <ScrollView>
+                      
+          
+    <Text style={{fontSize:30}}>Recomendaciones del dia</Text>
+    <Text></Text>
+
+
+    <View  style={{height:'100%', maxWidth: 600}}>
+
+    <View>
+
+    <TouchableOpacity onPress={()=>navigation.navigate("Restaurant1")} >
     <Image
-    source={{
-      uri: 'https://bde04f90fcbcc7b99af9-a4cf3e88ec567f5b6c6819f1d482f77f.ssl.cf1.rackcdn.com/5_750_r_0.jpg?v=1344',}}
-      style={{height:200, width: 200}} />
-    <Button
-        title="Reservar"
-        style={{width: 200}}
-        onPress={() => navigation.navigate("Factura")}/>
-        
-  <Image
-  source={{ uri: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/339941744.jpg?k=5ee1b091f5498cea0aebbe453f015596d0ad69445be1fc35c41e70a7c6964169&o=&hp=1',}}
-    style={{height:200, width: 400}} />
-    <Button
-        title="Reservar"
-        onPress={() => navigation.navigate("Factura")}/>
-  <Image
-    source={{
-      uri: 'https://photo620x400.mnstatic.com/20f655373bbada0209346788a1efbb29/restaurante-el-paraiso.jpg',}}
-      style={{height:200, width: 400}} />
+      source={require('../assets/image.jpg')}
+      style={styles.imagenes}>
 
-    <Button
-        title="Reservar"
-        onPress={() => navigation.navigate("Factura")}/>
+      </Image>
 
-  <Image
-    source={{
-      uri: 'https://fastly.4sqi.net/img/general/600x600/5894517_H9-CW7ojUIbq3G_7Jaqkj1YNhoyAhVLwoqN1wHgrpYs.jpg',}}
-      style={{height:200, width: 400}} />
 
-    <Button
-        title="Reservar"
-        onPress={() => navigation.navigate("Factura")}/>
+    </TouchableOpacity>
+    
+    <Text>Numero 1 pollo en brasas</Text>
+    <Text>40$ por persona.</Text>
 
-  </ScrollView>
+    </View>
+
+    <View>
+    
+    <TouchableOpacity onPress={()=>navigation.navigate("Restaurant2")} >
+    <Image
+      source={require('../assets/image1.jpg')}
+      style={styles.imagenes} />
+    </TouchableOpacity>
+    <Text>Numero 2 pastas</Text>
+    <Text>20$ por persona.</Text>
+
+
+    </View>
+    
+    
+
+
+
+
+    <View>
+    <TouchableOpacity onPress={()=>navigation.navigate("Restaurant3")} >
+     <Image
+      source={require('../assets/image2.jpg')}
+      style={styles.imagenes} />
+     </TouchableOpacity>
+     <Text>Numero 3 hamburguesas</Text>
+    <Text>15$ por persona.</Text>
+
+     </View>
+
+    
+
+
+    <View>
+    <TouchableOpacity onPress={()=>navigation.navigate("Restaurant4")} >
+    <Image
+    source={require('../assets/image3.jpg')}
+    style={styles.imagenes} />
+    
+    </TouchableOpacity>
+    <Text>Numero 4 pollo en brasas</Text>
+    <Text>40$ por persona.</Text>
+    
+    </View>
+
+    </View>
+
+
+</ScrollView>
   
+
+
+
   );
 }
-
-
