@@ -4,6 +4,7 @@ import { styles } from "../style/style.js";
 
 
 export default function LogScreen({ navigation }) {
+  
   React.useEffect(() => {
  
     navigation.setOptions({
@@ -11,21 +12,21 @@ export default function LogScreen({ navigation }) {
         
         <TouchableOpacity onPress={()=>Alert.alert(
           "¿Desea cerrar sesión?",
-          "Presione OK para salir",
+          "",
           [
             {
-              text: "Cancel",
-              onPress: () => console.log("Presionaste cancelar"),
+              text: "No",
+              onPress: () => console.log("Presionaste no"),
             },
-            { text: "OK", onPress: () => navigation.navigate("Login") }
+            { text: "Si", onPress: () => navigation.navigate("Login") }
           ]
         )
         }>
-        <Image source={require('../assets/botonexit.png')}
+        <Image source={require('../assets/botonexit.jpg')}
         style={styles.Buttonout}></Image>
         </TouchableOpacity>
       
-      ),      
+      ),
     });
   }, [navigation]);
 
@@ -40,14 +41,14 @@ export default function LogScreen({ navigation }) {
         } else {
       e.preventDefault();
       Alert.alert(
-        "¿Desea cerrar sesión?",
-        "Presione OK para salir",
+        "¿Desea hacer otra reservacion?",
+        "Sí presiona no, se cerrará sesión",
         [
           {
-            text: "Cancel",
-            onPress: () => console.log("Presionaste cancelar"),
+            text: "No",
+            onPress: () => navigation.push('Login')
           },
-          { text: "OK", onPress: () => navigation.navigate("Login") }
+          { text: "Si", onPress: () => navigation.navigate("Reserva") }
         ]
       );
      }

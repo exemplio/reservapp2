@@ -14,7 +14,7 @@ import Restaurant4 from "./components/Pantalla2d";
 
 const Stack = createNativeStackNavigator();
 
-function App() {
+export default function App() {
 
   LogBox.ignoreLogs(["AsyncStorage has been extracted from react-native core and will be removed in a future release. It can now be installed and imported from '@react-native-async-storage/async-storage' instead of 'react-native'. See https://github.com/react-native-async-storage/async-storage"]);
 
@@ -30,7 +30,7 @@ function App() {
           headerTitleStyle: {
           fontWeight: 'bold',
           },
-          headerTitleAlign: "center"}} initialRouteName="Login">
+          headerTitleAlign: "center"}} initialRouteName="Reserva">
       
       
         <Stack.Screen name="Login" component={Login} 
@@ -53,7 +53,6 @@ function App() {
   );
 }
 
-export default App;
 
 
 

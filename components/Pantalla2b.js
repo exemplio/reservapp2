@@ -1,4 +1,5 @@
-import { Button, View, Text, Image, StyleSheet, ScrollView, Alert, TouchableOpacity } from "react-native";
+import { Button, View, Text, Image, StyleSheet, ScrollView, 
+  Alert, TouchableOpacity, ImageBackground } from "react-native";
 import React, { useState, useEffect } from 'react';
 import { styles } from "../style/style.js";
 
@@ -12,17 +13,17 @@ export default function Restaurant2({ navigation }) {
         
         <TouchableOpacity onPress={()=>Alert.alert(
           "¿Desea cerrar sesión?",
-          "Presione OK para salir",
+          "",
           [
             {
-              text: "Cancel",
-              onPress: () => console.log("Presionaste cancelar"),
+              text: "No",
+              onPress: () => console.log("Presionaste no"),
             },
-            { text: "OK", onPress: () => navigation.navigate("Login") }
+            { text: "Si", onPress: () => navigation.navigate("Login") }
           ]
         )
         }>
-        <Image source={require('../assets/botonexit.png')}
+        <Image source={require('../assets/botonexit.jpg')}
         style={styles.Buttonout}></Image>
         </TouchableOpacity>
       
@@ -32,7 +33,9 @@ export default function Restaurant2({ navigation }) {
 
   return (
     
-    
+    <ImageBackground style={{height:'100%', width:'100%'}} 
+        source={require('../assets/imagefondo.jpg')} resizeMode="cover">
+
     <View  style={{height:'100%'}}>
 
     <Image
@@ -43,11 +46,14 @@ export default function Restaurant2({ navigation }) {
 
 
     <TouchableOpacity onPress={()=>navigation.navigate("Factura")}>
-    <Image source={require('../assets/boton1.png')}
+    <Image source={require('../assets/boton1.jpg')}
       style={styles.botonreservar}></Image>
     </TouchableOpacity>
 
     </View>
+
+    </ImageBackground>
+
   )
 }
 

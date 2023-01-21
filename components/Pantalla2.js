@@ -1,5 +1,5 @@
 import { View, Text, Image, StyleSheet, 
-  ScrollView, Alert, TouchableOpacity, Button } from "react-native";
+  ScrollView, Alert, TouchableOpacity, Button, ImageBackground } from "react-native";
 import React, { useState, useEffect } from 'react';
 import { styles } from "../style/style.js";
 
@@ -13,17 +13,17 @@ export default function AboutScreen({ navigation }) {
         
         <TouchableOpacity onPress={()=>Alert.alert(
           "¿Desea cerrar sesión?",
-          "Presione OK para salir",
+          "",
           [
             {
-              text: "Cancel",
-              onPress: () => console.log("Presionaste cancelar"),
+              text: "No",
+              onPress: () => console.log("Presionaste no"),
             },
-            { text: "OK", onPress: () => navigation.navigate("Login") }
+            { text: "Si", onPress: () => navigation.navigate("Login") }
           ]
         )
         }>
-        <Image source={require('../assets/botonexit.png')}
+        <Image source={require('../assets/botonexit.jpg')}
         style={styles.Buttonout}></Image>
         </TouchableOpacity>
       
@@ -57,7 +57,9 @@ export default function AboutScreen({ navigation }) {
 
     
    
-   
+    <ImageBackground style={{height:'100%', width:'100%'}} 
+    source={require('../assets/imagefondo.jpg')} resizeMode="cover">
+
   <ScrollView>
                       
           
@@ -65,7 +67,7 @@ export default function AboutScreen({ navigation }) {
     <Text></Text>
 
 
-    <View  style={{height:'100%', maxWidth: 600}}>
+    <View  style={{height:'100%'}}>
 
     <View>
 
@@ -133,7 +135,7 @@ export default function AboutScreen({ navigation }) {
 
 </ScrollView>
   
-
+</ImageBackground>
 
 
   );

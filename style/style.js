@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     Buttonout: {
         width: 40,
         height: 40,
-        
+        marginHorizontal:-15,
       },
 
     botonreservar: {
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
 
     input:{
       
-      backgroundColor: "#ffff",
+      backgroundColor: "#fff8dc",
       padding: 10,
       height: 40,
       margin: 4,
