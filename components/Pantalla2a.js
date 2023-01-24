@@ -1,5 +1,5 @@
 import { View, Text, Image, StyleSheet, ScrollView, Alert, 
-  TouchableOpacity, Button, ImageBackground } from "react-native";
+  TouchableOpacity, Button, ImageBackground, handlerLongClick } from "react-native";
 import React, { useState, useEffect } from 'react';
 import { styles } from "../style/style.js";
 import database from '@firebase/database';
@@ -13,7 +13,7 @@ import * as react from 'react';
 export default function Restaurant1({ navigation }) {
   
   
-
+  function botonvolverylogout(){
   React.useEffect(() => {
  
     navigation.setOptions({
@@ -37,38 +37,60 @@ export default function Restaurant1({ navigation }) {
       
       ),
     });
-  }, [navigation]);
+  }, [navigation]);}
+  
+  botonvolverylogout();
+
+  
 
   return (
-  
-    <ImageBackground style={{height:'100%', width:'100%'}} 
-        source={require('../assets/imagefondo.jpg')} resizeMode="cover">
-   
     
-    <View  style={{height:'100%'}}>
+    <View  style={{height:'100%', backgroundColor:"#f0f8ff"}}>
 
     <View>
 
     <Image
     source={require('../assets/image.jpg')}
-    style={styles.imagenes}>
+    style={styles.imagenes}/>
 
-    </Image>
 
     </View>
 
-    <View>
+    <View style={{flexDirection:"row", alignSelf:"center" }}>
 
-    <TouchableOpacity onPress={()=>navigation.navigate("Factura")}>
-    <Image source={require('../assets/boton1.jpg')}
-      style={styles.botonreservar}></Image>
+    <TouchableOpacity onPress={()=>navigation.navigate("Factura")}
+    style={styles.botonSeleccion}>
+
+    <Text>
+        1
+      </Text>
+    </TouchableOpacity>
+
+    <TouchableOpacity onPress={()=>navigation.navigate("Factura")}
+    style={styles.botonSeleccion}>
+    <Text>
+      2
+    </Text>
+    </TouchableOpacity>
+
+    <TouchableOpacity onPress={()=>navigation.navigate("Factura")}
+    style={styles.botonSeleccion}>
+    <Text>
+      3
+    </Text>
+    </TouchableOpacity>
+
+    <TouchableOpacity onPress={()=>navigation.navigate("Factura")}
+    style={styles.botonSeleccion}>
+    <Text>
+      4
+    </Text>
     </TouchableOpacity>
     
     </View>
 
     </View>
     
-    </ImageBackground>
 
    )
 }

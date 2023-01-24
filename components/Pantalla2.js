@@ -6,6 +6,7 @@ import { styles } from "../style/style.js";
 
 export default function AboutScreen({ navigation }) {
  
+  function botonvolverylogout(){
   React.useEffect(() => {
  
     navigation.setOptions({
@@ -31,7 +32,6 @@ export default function AboutScreen({ navigation }) {
     });
   }, [navigation]);
 
-
   useEffect(() => {
     navigation.addListener("beforeRemove", (e) => {
        if(e.data.action.type !="GO_BACK") {
@@ -51,16 +51,16 @@ export default function AboutScreen({ navigation }) {
       );
      }
     });
-}, [navigation]);
+}, [navigation]);}
+
+  botonvolverylogout();
+
+
 
   return (
 
-    
-   
-    <ImageBackground style={{height:'100%', width:'100%'}} 
-    source={require('../assets/imagefondo.jpg')} resizeMode="cover">
 
-  <ScrollView>
+  <ScrollView style={{backgroundColor:"#f0f8ff"}}> 
                       
           
     <Text style={{fontSize:30}}>Recomendaciones del dia</Text>
@@ -77,14 +77,37 @@ export default function AboutScreen({ navigation }) {
       style={styles.imagenes}>
 
       </Image>
-
-
     </TouchableOpacity>
-    
-    <Text>Numero 1 pollo en brasas</Text>
-    <Text>40$ por persona.</Text>
 
     </View>
+
+
+    <View style={{flexDirection:"row"}}>
+    
+    <View style={{justifyContent:"flex-end"}}>
+    <Text style={{fontSize:40, color:"#008000"}}>
+    ●
+    </Text>
+    </View>
+    
+    <View style={{justifyContent:"center"}}>
+    <Text style={{fontSize:40, color:"#ffff00"}}>
+    ●
+    </Text>
+    </View>
+    
+
+    <View style={{justifyContent:"flex-end"}}>
+    <Text style={{fontSize:40, color:"#ff0000"}}>
+    ●
+    </Text>
+    </View>
+
+    </View>
+
+    
+    
+
 
     <View>
     
@@ -93,9 +116,29 @@ export default function AboutScreen({ navigation }) {
       source={require('../assets/image1.jpg')}
       style={styles.imagenes} />
     </TouchableOpacity>
-    <Text>Numero 2 pastas</Text>
-    <Text>20$ por persona.</Text>
 
+    </View>
+
+    <View style={{flexDirection:"row"}}>
+    
+    <View style={{justifyContent:"flex-end"}}>
+    <Text style={{fontSize:40, color:"#008000"}}>
+    ●
+    </Text>
+    </View>
+    
+    <View style={{justifyContent:"center"}}>
+    <Text style={{fontSize:40, color:"#ffff00"}}>
+    ●
+    </Text>
+    </View>
+    
+
+    <View style={{justifyContent:"flex-end"}}>
+    <Text style={{fontSize:40, color:"#ff0000"}}>
+    ●
+    </Text>
+    </View>
 
     </View>
     
@@ -110,10 +153,31 @@ export default function AboutScreen({ navigation }) {
       source={require('../assets/image2.jpg')}
       style={styles.imagenes} />
      </TouchableOpacity>
-     <Text>Numero 3 hamburguesas</Text>
-    <Text>15$ por persona.</Text>
 
      </View>
+
+     <View style={{flexDirection:"row"}}>
+    
+    <View style={{justifyContent:"flex-end"}}>
+    <Text style={{fontSize:40, color:"#008000"}}>
+    ●
+    </Text>
+    </View>
+    
+    <View style={{justifyContent:"center"}}>
+    <Text style={{fontSize:40, color:"#ffff00"}}>
+    ●
+    </Text>
+    </View>
+    
+
+    <View style={{justifyContent:"flex-end"}}>
+    <Text style={{fontSize:40, color:"#ff0000"}}>
+    ●
+    </Text>
+    </View>
+
+    </View>
 
     
 
@@ -130,12 +194,36 @@ export default function AboutScreen({ navigation }) {
     
     </View>
 
+
+    <View style={{flexDirection:"row"}}>
+    
+    <View style={{justifyContent:"flex-end"}}>
+    <Text style={{fontSize:40, color:"#008000"}}>
+    ●
+    </Text>
+    </View>
+    
+    <View style={{justifyContent:"center"}}>
+    <Text style={{fontSize:40, color:"#ffff00"}}>
+    ●
+    </Text>
+    </View>
+    
+
+    <View style={{justifyContent:"flex-end"}}>
+    <Text style={{fontSize:40, color:"#ff0000"}}>
+    ●
+    </Text>
+    </View>
+
     </View>
 
 
+
+
+</View>
 </ScrollView>
   
-</ImageBackground>
 
 
   );

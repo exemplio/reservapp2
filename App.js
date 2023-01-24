@@ -40,13 +40,14 @@ export default function App() {
         options={{headerBackVisible: false}} />
 
         <Stack.Screen name="Factura" component={LogScreen}
-        options={{headerBackVisible: false}}/>
+        //options={{headerBackVisible: false}}
+        
+        />
 
         <Stack.Screen name="Restaurant1" component={Restaurant1}/>
         <Stack.Screen name="Restaurant2" component={Restaurant2}/>
         <Stack.Screen name="Restaurant3" component={Restaurant3}/>
         <Stack.Screen name="Restaurant4" component={Restaurant4} />
-      
 
       </Stack.Navigator>
     </NavigationContainer>

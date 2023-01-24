@@ -1,4 +1,5 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+
 
 
 const styles = StyleSheet.create({
@@ -18,10 +19,10 @@ const styles = StyleSheet.create({
       },
 
     botonreservar: {
-        width: 150,
-        height: 250,
+        width: 100,
+        height: 150,
         resizeMode: "contain",
-        margin: 6,
+        margin: 0,
         
       },
       
@@ -37,12 +38,50 @@ const styles = StyleSheet.create({
 
     input:{
       
-      backgroundColor: "#fff8dc",
-      padding: 10,
-      height: 40,
-      margin: 4,
+      borderWidth:1,
+      borderColor:'gray',
+      padding:10,
+      width:'60%',
+      height:50,
+      marginTop:10,
+      borderRadius:10,
+      backgroundColor:"#ffffff",
+      paddingStart:10,
 
     },
+
+    botonSign:{
+      borderWidth:1,
+      padding:10,
+      width:120,
+      height:50,
+      marginTop:10,
+      borderRadius:10,
+      justifyContent:"center",
+      alignItems:'center',
+      backgroundColor:"#faebd7",
+    },
+
+    botonSeleccion:{
+      borderWidth:1,
+      padding:10,
+      width:40,
+      height:40,
+      marginTop:10,
+      marginLeft:5,
+      justifyContent:"center",
+      alignItems:'center',
+      backgroundColor:"#ffffff",
+      
+    },
+
+    imageSemaforo:{
+
+      width:"10%",
+      height:50,
+      marginLeft:5,
+
+    }
     
   });
 
