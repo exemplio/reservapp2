@@ -63,7 +63,7 @@ export default function AboutScreen({ navigation }) {
   <ScrollView style={{backgroundColor:"#f0f8ff"}}> 
                       
           
-    <Text style={{fontSize:30}}>Recomendaciones del dia</Text>
+    <Text style={{fontSize:20}}>Recomendaciones del dia</Text>
     <Text></Text>
 
 
@@ -189,9 +189,7 @@ export default function AboutScreen({ navigation }) {
     style={styles.imagenes} />
     
     </TouchableOpacity>
-    <Text>Numero 4 pollo en brasas</Text>
-    <Text>40$ por persona.</Text>
-    
+   
     </View>
 
 

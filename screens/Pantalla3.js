@@ -91,7 +91,7 @@ export default function LogScreen({ navigation }) {
       NOMBRE: {displayName} {"\n"}
       CORREO: {email} {"\n"}
       FECHA:  {"\n"}
-      N° REFERENCIA: ______ {"\n"}
+      CANTIDAD DE RESERVAS: ______ {"\n"}
       RESTAURANTE: ------ {"\n"}
 
     </Text>

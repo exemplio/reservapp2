@@ -3,13 +3,16 @@ import { LogBox } from 'react-native';
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Login from "./components/Pantalla1";
-import AboutScreen from "./components/Pantalla2";
-import LogScreen from "./components/Pantalla3";
-import Restaurant1 from "./components/Pantalla2a";
-import Restaurant2 from "./components/Pantalla2b";
-import Restaurant3 from "./components/Pantalla2c";
-import Restaurant4 from "./components/Pantalla2d";
+import Login from "./screens/Pantalla1";
+import AboutScreen from "./screens/Pantalla2";
+import LogScreen from "./screens/Pantalla3";
+import Restaurant1 from "./screens/Pantalla2a";
+import Restaurant2 from "./screens/Pantalla2b";
+import Restaurant3 from "./screens/Pantalla2c";
+import Restaurant4 from "./screens/Pantalla2d";
+import RecuperarDatos from "./screens/RecuperarDatos";
+import { HeaderTitle } from '@react-navigation/elements';
+
 
 
 const Stack = createNativeStackNavigator();
@@ -30,11 +33,11 @@ export default function App() {
           headerTitleStyle: {
           fontWeight: 'bold',
           },
-          headerTitleAlign: "center"}} initialRouteName="Reserva">
+          headerTitleAlign: "center"}} initialRouteName="Login">
       
       
         <Stack.Screen name="Login" component={Login} 
-        options={{headerBackVisible: false}}/>
+        options={{headerBackVisible: false, headerShown: false}}/>
 
         <Stack.Screen name="Reserva" component={AboutScreen} 
         options={{headerBackVisible: false}} />
@@ -48,42 +51,16 @@ export default function App() {
         <Stack.Screen name="Restaurant2" component={Restaurant2}/>
         <Stack.Screen name="Restaurant3" component={Restaurant3}/>
         <Stack.Screen name="Restaurant4" component={Restaurant4} />
+        
+        <Stack.Screen name="RecuperarDatos" component={RecuperarDatos}
+         options={{title:"Recupera tu contraseña"}}
+        />
+
 
       </Stack.Navigator>
+
+
+
     </NavigationContainer>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

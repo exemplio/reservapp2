@@ -6,6 +6,7 @@ import { initializeApp } from "firebase/app";
 import { firebaseConfig } from '../firebase-config';
 import React, { useState, useEffect } from 'react';
 import ButtonLinearGradient from '../style/buttonLinearGradient.js';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
 export default function Login({navigation}){
@@ -22,7 +23,7 @@ export default function Login({navigation}){
 }, [navigation]);
 
 
-
+  
   const [email, setEmail]=React.useState("")
   const [password, setPassword]=React.useState("")
 
@@ -98,7 +99,13 @@ export default function Login({navigation}){
 
         <TextInput secureTextEntry={true} style={ styles.input}
           onChangeText={(text) => setPassword(text)} 
-          placeholder='Password'></TextInput>
+          placeholder='******'></TextInput>
+
+        <TouchableOpacity
+         onPress={()=> navigation.navigate("RecuperarDatos")}
+        style={{marginTop:10}}>
+        <Text>¿Olvidaste tu contraseña?</Text>
+        </TouchableOpacity>
 
         <TouchableOpacity onPress={handleSignIn}>
         <ButtonLinearGradient/>
