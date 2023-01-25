@@ -1,5 +1,4 @@
-import { Text, TextInput, 
-  TouchableOpacity, ImageBackground,  View, StyleSheet, Button, Alert } from 'react-native';
+import { Text, TextInput, TouchableOpacity, View,Alert } from 'react-native';
 import { styles } from "../style/style.js";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { initializeApp } from "firebase/app";
@@ -12,7 +11,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 export default function Login({navigation}){
 
   useEffect(() => {
-    navigation.addListener("beforeRemove", (e) => {
+    navigation.addListener("beforeRemove", (e) => {  //Boton para evitar volver hacia atras
        if(e.data.action.type !="GO_BACK") {
          return ;
         } else {
@@ -101,17 +100,14 @@ export default function Login({navigation}){
           onChangeText={(text) => setPassword(text)} 
           placeholder='******'></TextInput>
 
-        <TouchableOpacity
-         onPress={()=> navigation.navigate("RecuperarDatos")}
-        style={{marginTop:10}}>
-        <Text>¿Olvidaste tu contraseña?</Text>
-        </TouchableOpacity>
-
         <TouchableOpacity onPress={handleSignIn}>
         <ButtonLinearGradient/>
         </TouchableOpacity>
 
-
+        
+       
+   
+        
         
     </View>
       
@@ -121,3 +117,14 @@ export default function Login({navigation}){
 
   
 }
+
+/** 
+<TouchableOpacity //Boton olvidaste tu contraseña
+onPress={()=> navigation.navigate("RecuperarDatos")}
+style={{marginTop:10}}>
+<Text>¿Olvidaste tu contraseña?</Text>
+</TouchableOpacity>
+
+
+
+*/

@@ -33,7 +33,7 @@ export default function App() {
           headerTitleStyle: {
           fontWeight: 'bold',
           },
-          headerTitleAlign: "center"}} initialRouteName="Login">
+          headerTitleAlign: "center"}} initialRouteName="Reserva">
       
       
         <Stack.Screen name="Login" component={Login} 

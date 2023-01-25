@@ -2,7 +2,7 @@ import { View, Text, Image, StyleSheet,
   ScrollView, Alert, TouchableOpacity, Button, ImageBackground } from "react-native";
 import React, { useState, useEffect } from 'react';
 import { styles } from "../style/style.js";
-
+import DbFirestore from "../dbfirestore/dbfirestore.js"
 
 export default function AboutScreen({ navigation }) {
  
@@ -65,6 +65,9 @@ export default function AboutScreen({ navigation }) {
           
     <Text style={{fontSize:20}}>Recomendaciones del dia</Text>
     <Text></Text>
+    
+    <DbFirestore/>
+
 
 
     <View  style={{height:'100%'}}>
