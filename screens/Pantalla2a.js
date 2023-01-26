@@ -1,14 +1,7 @@
-import { View, Text, Image, StyleSheet, ScrollView, Alert, 
-  TouchableOpacity, Button, ImageBackground, handlerLongClick } from "react-native";
+import { View, Text, Image, Alert, TouchableOpacity, } from "react-native";
 import React, { useState, useEffect } from 'react';
 import { styles } from "../style/style.js";
-import database from '@firebase/database';
-import { firebaseConfig } from '../firebase-config';
-import { getDatabase } from "firebase/database";
-import { initializeApp } from "firebase/app";   
-import firebase from 'firebase/app';
-import * as react from 'react';
-
+import UserScreen from "../database/firedatabase.js";
 
 export default function Restaurant1({ navigation }) {
   
@@ -43,6 +36,8 @@ export default function Restaurant1({ navigation }) {
 
   
 
+  
+
   return (
     
     <View  style={{height:'100%', backgroundColor:"#f0f8ff"}}>
@@ -58,7 +53,23 @@ export default function Restaurant1({ navigation }) {
 
     <View style={{flexDirection:"row", alignSelf:"center" }}>
 
-    <TouchableOpacity onPress={()=>navigation.navigate("Factura")}
+    <TouchableOpacity onPress={()=>Alert.alert(
+          "¿Está seguro que desea hacer 1 reservacion/es?",
+          "",
+          [
+            {
+              text: "Cancelar",
+            },
+            { text: "Reservar", onPress: () => 
+            
+            navigation.navigate("Factura") }
+          ]
+        )
+        }
+    
+    
+    
+    
     style={styles.botonSeleccion}>
 
     <Text>
@@ -66,28 +77,95 @@ export default function Restaurant1({ navigation }) {
       </Text>
     </TouchableOpacity>
 
-    <TouchableOpacity onPress={()=>navigation.navigate("Factura")}
+
+
+    
+
+    <TouchableOpacity onPress={()=>Alert.alert(
+          "¿Está seguro que desea hacer 2 reservacion/es?",
+          "",
+          [
+            {
+              text: "Cancelar",
+            },
+            { text: "Reservar", onPress: () => navigation.navigate("Factura") }
+          ]
+        )
+        }
+    
+    
+    
+    
     style={styles.botonSeleccion}>
+
+
+
+
     <Text>
       2
     </Text>
     </TouchableOpacity>
 
-    <TouchableOpacity onPress={()=>navigation.navigate("Factura")}
+
+
+
+
+    <TouchableOpacity onPress={()=>Alert.alert(
+          "¿Está seguro que desea hacer 3 reservacion/es?",
+          "",
+          [
+            {
+              text: "Cancelar",
+            },
+            { text: "Reservar", onPress: () => navigation.navigate("Factura") }
+          ]
+        )
+        }
+    
+    
+    
+    
     style={styles.botonSeleccion}>
+
+
+
+
     <Text>
       3
     </Text>
     </TouchableOpacity>
 
-    <TouchableOpacity onPress={()=>navigation.navigate("Factura")}
+
+
+
+    <TouchableOpacity onPress={()=>Alert.alert(
+          "¿Está seguro que desea hacer 4 reservacion/es?",
+          "",
+          [
+            {
+              text: "Cancelar",
+            },
+            { text: "Reservar", onPress: () => navigation.navigate("Factura") }
+          ]
+        )
+        }
+    
+    
+    
+    
     style={styles.botonSeleccion}>
+
+
+
+
     <Text>
       4
     </Text>
     </TouchableOpacity>
     
     </View>
+
+
 
     </View>
     
