@@ -1,12 +1,19 @@
-import { TouchableHighlight, TouchableOpacity, Button, View, Text, Image, StyleSheet, ScrollView, Alert } from "react-native";
+import { TouchableOpacity, View, Text, Image, Alert } from "react-native";
 import React, { useState, useEffect } from 'react';
 import { styles } from "../style/style.js";
 import { getAuth, updateProfile } from "firebase/auth";
+import UserScreen from "../database/firedatabase.js"
 
 
 
 
 export default function LogScreen({ navigation }) {
+
+const date = new Date().getDate(); 
+const month = new Date().getMonth() + 1; 
+const year = new Date().getFullYear(); 
+const hours = new Date().getHours(); 
+const min = new Date().getMinutes(); 
   
   
   function botonvolverylogout(){
@@ -83,18 +90,27 @@ export default function LogScreen({ navigation }) {
       <Text style={{alignSelf:'center', fontSize:20}}>
         
       Usted ha realizado su reservacion exitoxamente.
+
       </Text>
+
+      <Text>{"\n"}</Text>
 
       <Text style={{alignSelf:'center', fontSize:20}}>
 
       * * * DATOS OPERACIÓN * * *{"\n"}
+
+      </Text>
+
+
+      <Text style={{alignSelf:'center', fontSize:20}}>
+
       NOMBRE: {displayName} {"\n"}
       CORREO: {email} {"\n"}
-      FECHA:  {"\n"}
+      FECHA:  {date}/{month}/{year} {"\n"}
       CANTIDAD DE RESERVAS: ______ {"\n"}
       RESTAURANTE: ------ {"\n"}
 
-    </Text>
+      </Text>
   
   </View>
 

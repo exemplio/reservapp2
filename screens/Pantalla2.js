@@ -1,10 +1,16 @@
-import { View, Text, Image, StyleSheet, 
-  ScrollView, Alert, TouchableOpacity, Button, ImageBackground } from "react-native";
+import { View, Text, Image, 
+  ScrollView, Alert, TouchableOpacity } from "react-native";
 import React, { useState, useEffect } from 'react';
 import { styles } from "../style/style.js";
-import DbFirestore from "../dbfirestore/dbfirestore.js"
+import UserScreen, {user} from "../database/firedatabase.js"
+import UserScreen2 from "../database/firedatabase2.js"
+import UserScreen3 from "../database/firedatabase3.js"
+import UserScreen4 from "../database/firedatabase4.js"
+
+
 
 export default function AboutScreen({ navigation }) {
+
  
   function botonvolverylogout(){
   React.useEffect(() => {
@@ -53,8 +59,12 @@ export default function AboutScreen({ navigation }) {
     });
 }, [navigation]);}
 
+
+
   botonvolverylogout();
 
+
+  console.log(user);
 
 
   return (
@@ -65,9 +75,8 @@ export default function AboutScreen({ navigation }) {
           
     <Text style={{fontSize:20}}>Recomendaciones del dia</Text>
     <Text></Text>
-    
-    <DbFirestore/>
 
+    
 
 
     <View  style={{height:'100%'}}>
@@ -84,6 +93,7 @@ export default function AboutScreen({ navigation }) {
 
     </View>
 
+    <UserScreen/>
 
     <View style={{flexDirection:"row"}}>
     
@@ -122,6 +132,9 @@ export default function AboutScreen({ navigation }) {
 
     </View>
 
+    <UserScreen2/>
+
+
     <View style={{flexDirection:"row"}}>
     
     <View style={{justifyContent:"flex-end"}}>
@@ -145,8 +158,6 @@ export default function AboutScreen({ navigation }) {
 
     </View>
     
-    
-
 
 
 
@@ -158,6 +169,8 @@ export default function AboutScreen({ navigation }) {
      </TouchableOpacity>
 
      </View>
+
+     <UserScreen3/>
 
      <View style={{flexDirection:"row"}}>
     
@@ -195,6 +208,8 @@ export default function AboutScreen({ navigation }) {
    
     </View>
 
+    <UserScreen4/>
+
 
     <View style={{flexDirection:"row"}}>
     
@@ -218,6 +233,8 @@ export default function AboutScreen({ navigation }) {
     </View>
 
     </View>
+
+
 
 
 
