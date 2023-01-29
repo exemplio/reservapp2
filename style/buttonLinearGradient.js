@@ -17,7 +17,6 @@ return(
 
 }
 
-// Later on in your styles..
 var styles = StyleSheet.create({
   linearGradient: {
     marginTop:10,

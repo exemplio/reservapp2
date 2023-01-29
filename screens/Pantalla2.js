@@ -2,11 +2,14 @@ import { View, Text, Image,
   ScrollView, Alert, TouchableOpacity } from "react-native";
 import React, { useState, useEffect } from 'react';
 import { styles } from "../style/style.js";
-import UserScreen, {user} from "../database/firedatabase.js"
+import UserScreen from "../database/firedatabase1.js"
 import UserScreen2 from "../database/firedatabase2.js"
 import UserScreen3 from "../database/firedatabase3.js"
 import UserScreen4 from "../database/firedatabase4.js"
-
+import UserScreenCopy from "../database/firedatabase1copy.js"
+import UserScreen2Copy from "../database/firedatabase2copy.js"
+import UserScreen3Copy from "../database/firedatabase3copy.js"
+import UserScreen4Copy from "../database/firedatabase4copy.js"
 
 
 export default function AboutScreen({ navigation }) {
@@ -60,11 +63,9 @@ export default function AboutScreen({ navigation }) {
 }, [navigation]);}
 
 
+botonvolverylogout();
 
-  botonvolverylogout();
 
-
-  console.log(user);
 
 
   return (
@@ -81,6 +82,8 @@ export default function AboutScreen({ navigation }) {
 
     <View  style={{height:'100%'}}>
 
+    <UserScreenCopy/>
+
     <View>
 
     <TouchableOpacity onPress={()=>navigation.navigate("Restaurant1")} >
@@ -95,32 +98,12 @@ export default function AboutScreen({ navigation }) {
 
     <UserScreen/>
 
-    <View style={{flexDirection:"row"}}>
-    
-    <View style={{justifyContent:"flex-end"}}>
-    <Text style={{fontSize:40, color:"#008000"}}>
-    ●
-    </Text>
-    </View>
-    
-    <View style={{justifyContent:"center"}}>
-    <Text style={{fontSize:40, color:"#ffff00"}}>
-    ●
-    </Text>
-    </View>
-    
-
-    <View style={{justifyContent:"flex-end"}}>
-    <Text style={{fontSize:40, color:"#ff0000"}}>
-    ●
-    </Text>
-    </View>
-
-    </View>
+    <Text>{"\n"}</Text>
 
     
     
 
+    <UserScreen2Copy/>
 
     <View>
     
@@ -135,69 +118,27 @@ export default function AboutScreen({ navigation }) {
     <UserScreen2/>
 
 
-    <View style={{flexDirection:"row"}}>
-    
-    <View style={{justifyContent:"flex-end"}}>
-    <Text style={{fontSize:40, color:"#008000"}}>
-    ●
-    </Text>
-    </View>
-    
-    <View style={{justifyContent:"center"}}>
-    <Text style={{fontSize:40, color:"#ffff00"}}>
-    ●
-    </Text>
-    </View>
-    
-
-    <View style={{justifyContent:"flex-end"}}>
-    <Text style={{fontSize:40, color:"#ff0000"}}>
-    ●
-    </Text>
-    </View>
-
-    </View>
+    <Text>{"\n"}</Text>
     
 
 
-
+    <UserScreen3Copy/>
     <View>
     <TouchableOpacity onPress={()=>navigation.navigate("Restaurant3")} >
-     <Image
+    <Image
       source={require('../assets/image2.jpg')}
       style={styles.imagenes} />
-     </TouchableOpacity>
+    </TouchableOpacity>
 
      </View>
 
      <UserScreen3/>
 
-     <View style={{flexDirection:"row"}}>
-    
-    <View style={{justifyContent:"flex-end"}}>
-    <Text style={{fontSize:40, color:"#008000"}}>
-    ●
-    </Text>
-    </View>
-    
-    <View style={{justifyContent:"center"}}>
-    <Text style={{fontSize:40, color:"#ffff00"}}>
-    ●
-    </Text>
-    </View>
-    
-
-    <View style={{justifyContent:"flex-end"}}>
-    <Text style={{fontSize:40, color:"#ff0000"}}>
-    ●
-    </Text>
-    </View>
-
-    </View>
+     <Text>{"\n"}</Text>
 
     
 
-
+    <UserScreen4Copy/>
     <View>
     <TouchableOpacity onPress={()=>navigation.navigate("Restaurant4")} >
     <Image
@@ -211,28 +152,7 @@ export default function AboutScreen({ navigation }) {
     <UserScreen4/>
 
 
-    <View style={{flexDirection:"row"}}>
-    
-    <View style={{justifyContent:"flex-end"}}>
-    <Text style={{fontSize:40, color:"#008000"}}>
-    ●
-    </Text>
-    </View>
-    
-    <View style={{justifyContent:"center"}}>
-    <Text style={{fontSize:40, color:"#ffff00"}}>
-    ●
-    </Text>
-    </View>
-    
-
-    <View style={{justifyContent:"flex-end"}}>
-    <Text style={{fontSize:40, color:"#ff0000"}}>
-    ●
-    </Text>
-    </View>
-
-    </View>
+    <Text>{"\n"}</Text>
 
 
 

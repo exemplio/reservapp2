@@ -11,8 +11,6 @@ import Restaurant2 from "./screens/Pantalla2b";
 import Restaurant3 from "./screens/Pantalla2c";
 import Restaurant4 from "./screens/Pantalla2d";
 import RecuperarDatos from "./screens/RecuperarDatos";
-import { HeaderTitle } from '@react-navigation/elements';
-
 
 
 const Stack = createNativeStackNavigator();
@@ -51,6 +49,11 @@ export default function App() {
         <Stack.Screen name="Restaurant2" component={Restaurant2}/>
         <Stack.Screen name="Restaurant3" component={Restaurant3}/>
         <Stack.Screen name="Restaurant4" component={Restaurant4} />
+
+
+
+
+
         
         <Stack.Screen name="RecuperarDatos" component={RecuperarDatos}
          options={{title:"Recupera tu contraseña"}}

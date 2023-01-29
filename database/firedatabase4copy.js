@@ -2,14 +2,15 @@ import React, { useState, useEffect } from "react";
 import { Button, StyleSheet, View, Text, SectionList } from "react-native";
 import { ListItem } from "react-native-elements";
 import { ScrollView } from "react-native-gesture-handler";
+
 import firebaseConfig from "../firebase-config";
 
 
-const UserScreen = (props) => {
+const UserScreen4Copy = (props) => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    firebaseConfig.db.collection("rest1").onSnapshot((querySnapshot) => {
+    firebaseConfig.db.collection("rest4").onSnapshot((querySnapshot) => {
       const users = [];
       querySnapshot.docs.forEach((doc) => {
         const { puestos } = doc.data();
@@ -40,7 +41,9 @@ const UserScreen = (props) => {
           bottomDivider
         >
           <ListItem.Content>
-            <ListItem.Subtitle>Cantidad de puestos disponibles: {user.puestos}</ListItem.Subtitle>
+            <ListItem.Subtitle>
+              Restaurante: {user.id}
+              </ListItem.Subtitle>
           </ListItem.Content>
         </ListItem>
       );
@@ -50,4 +53,4 @@ const UserScreen = (props) => {
   );
 };
 
-export default UserScreen;
+export default UserScreen4Copy;

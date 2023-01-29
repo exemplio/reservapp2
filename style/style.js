@@ -75,13 +75,48 @@ const styles = StyleSheet.create({
       
     },
 
+    textoReservas:{
+
+      borderWidth:1,
+      padding:10,
+      position:'relative',
+      alignContent:"flex-end",
+      alignItems:"flex-end",
+      marginTop:10,
+      marginLeft:5,
+      backgroundColor:"#ffffff"
+      
+      ,
+
+
+    },
+
     imageSemaforo:{
 
       width:"10%",
       height:50,
       marginLeft:5,
 
-    }
+    },
+
+    letrasTitulosRestaurantes:{
+
+      fontWeight: 'bold',
+      fontSize: 18,
+      
+
+    },
+
+    letrasRestaurantes:{
+
+      fontStyle:"italic",
+      fontSize: 16,
+
+      
+
+    },
+
+    
     
   });
 

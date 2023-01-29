@@ -2,7 +2,7 @@ import { TouchableOpacity, View, Text, Image, Alert } from "react-native";
 import React, { useState, useEffect } from 'react';
 import { styles } from "../style/style.js";
 import { getAuth, updateProfile } from "firebase/auth";
-import UserScreen from "../database/firedatabase.js"
+import UserScreen from "../database/firedatabase1.js"
 
 
 
@@ -107,6 +107,7 @@ const min = new Date().getMinutes();
       NOMBRE: {displayName} {"\n"}
       CORREO: {email} {"\n"}
       FECHA:  {date}/{month}/{year} {"\n"}
+      HORA MAXIMA:  {hours}:{min} {"\n"}
       CANTIDAD DE RESERVAS: ______ {"\n"}
       RESTAURANTE: ------ {"\n"}
 
@@ -118,5 +119,3 @@ const min = new Date().getMinutes();
 
     }
 }
-
-
