@@ -35,20 +35,38 @@ export default function App() {
       
       
         <Stack.Screen name="Login" component={Login} 
-        options={{headerBackVisible: false, headerShown: false}}/>
+        options={{headerBackVisible: false, headerShown: false
+        , animation:"slide_from_left", headerTitleAlign:"left"}}/>
 
         <Stack.Screen name="Reserva" component={AboutScreen} 
-        options={{headerBackVisible: false}} />
+        options={{title: "Agendapp", headerBackVisible: false, animation:"slide_from_left", 
+        headerTitleAlign:"left"}} />
 
         <Stack.Screen name="Factura" component={LogScreen}
-        //options={{headerBackVisible: false}}
+        options={{headerTitleAlign:"left", animation:"slide_from_left" }}
+        //headerBackVisible: false}}
         
         />
 
-        <Stack.Screen name="Restaurant1" component={Restaurant1}/>
-        <Stack.Screen name="Restaurant2" component={Restaurant2}/>
-        <Stack.Screen name="Restaurant3" component={Restaurant3}/>
-        <Stack.Screen name="Restaurant4" component={Restaurant4} />
+        <Stack.Screen name="Restaurant1" component={Restaurant1}
+        options={{title: "Agendapp", animation:"slide_from_left", 
+        headerTitleAlign:"left"}}/>
+
+
+        <Stack.Screen name="Restaurant2" component={Restaurant2}
+        options={{title: "Agendapp", animation:"slide_from_left", 
+        headerTitleAlign:"left"}}/>
+
+
+        <Stack.Screen name="Restaurant3" component={Restaurant3}
+        options={{title: "Agendapp", animation:"slide_from_left", 
+        headerTitleAlign:"left"}}/>
+
+
+        <Stack.Screen name="Restaurant4" component={Restaurant4}
+        options={{title: "Agendapp", animation:"slide_from_left", 
+        headerTitleAlign:"left"}}/>
+
 
 
 

@@ -1,16 +1,16 @@
 {
   "build": {
-    "local": {
+    "preview": {
       "android": {
         "buildType": "apk"
       }
     },
-    "local2": {
+    "preview2": {
       "android": {
         "gradleCommand": ":app:assembleRelease"
       }
     },
-    "local3": {
+    "preview3": {
       "developmentClient": true
     },
     "production": {}

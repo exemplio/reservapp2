@@ -6,39 +6,13 @@ import Condicional2 from "../condicionales/condicional2.js";
 import Condicional3 from "../condicionales/condicional3.js";
 import Condicional4 from "../condicionales/condicional4.js";
 import { ListItem } from "react-native-elements";
-
+import { CondicionalBack } from "../condicionales/condicionalback.js";
 
 export default function Restaurant2({ navigation }) {
   
+  CondicionalBack ({navigation});
+
  
-  function botonvolverylogout(){
-
-      React.useEffect(() => {
-    
-        navigation.setOptions({
-          headerRight: () => (
-            
-            <TouchableOpacity onPress={()=>Alert.alert(
-              "¿Desea cerrar sesión?",
-              "",
-              [
-                {
-                  text: "No",
-                  onPress: () => console.log("Presionaste no"),
-                },
-                { text: "Si", onPress: () => navigation.navigate("Login") }
-              ]
-            )
-            }>
-            <Image source={require('../assets/botonexit.jpg')}
-            style={styles.Buttonout}></Image>
-            </TouchableOpacity>
-          
-          ),
-        });
-      }, [navigation]);}
-
-      botonvolverylogout();
 
     return (
     

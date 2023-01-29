@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { styles } from "../style/style.js";
 import { getAuth, updateProfile } from "firebase/auth";
 import UserScreen from "../database/firedatabase1.js"
-
+import { CondicionalBack } from "../condicionales/condicionalback.js";
 
 
 
@@ -16,55 +16,8 @@ const hours = new Date().getHours();
 const min = new Date().getMinutes(); 
   
   
-  function botonvolverylogout(){
+CondicionalBack ({navigation});
 
-  React.useEffect(() => {
- 
-    navigation.setOptions({
-      headerRight: () => (
-        
-        <TouchableOpacity onPress={()=>Alert.alert(
-          "¿Desea cerrar sesión?",
-          "",
-          [
-            {
-              text: "No",
-              onPress: () => console.log("Presionaste no"),
-            },
-            { text: "Si", onPress: () => navigation.navigate("Login") }
-          ]
-        )
-        }>
-        <Image source={require('../assets/botonexit.jpg')}
-        style={styles.Buttonout}></Image>
-        </TouchableOpacity>
-      
-      ),
-    });
-  }, [navigation]);
-  
-  useEffect(() => {
-    navigation.addListener("beforeRemove", (e) => {
-       if(e.data.action.type !="GO_BACK") {
-         return ;
-        } else {
-      e.preventDefault();
-      Alert.alert(
-        "¿Desea hacer otra reservacion?",
-        "Sí presiona no, se cerrará sesión",
-        [
-          {
-            text: "No",
-            onPress: () => navigation.push('Login')
-          },
-          { text: "Si", onPress: () => navigation.navigate("Reserva") }
-        ]
-      );
-     }
-    });
-}, [navigation]);}
-
-  botonvolverylogout();
 
     const auth = getAuth();
     const user = auth.currentUser;

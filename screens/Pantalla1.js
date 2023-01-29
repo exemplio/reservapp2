@@ -86,7 +86,7 @@ export default function Login({navigation}){
 
           
         <Text style={{fontSize:50, alignSelf:"center"}}>
-          Hola
+          Agendapp
         </Text> 
         
         <Text style={{fontSize:20, alignSelf:"center"}}>
