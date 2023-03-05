@@ -8,7 +8,7 @@ import { styles } from "../style/style.js";
 
   export default function Condicional1({ navigation }) {
 
-         
+    
 
       return(
 
@@ -21,14 +21,16 @@ import { styles } from "../style/style.js";
                 {
                   text: "Cancelar",
                 },
-                { text: "Reservar", onPress: () => navigation.navigate("Factura") }
+                { text: "Reservar", onPress: () =>               
+                navigation.navigate("Factura"),
+              }
               ]
             )}
       
             style={styles.botonSeleccion}>
         
             <Text>
-                1
+                {unaReserva}
               </Text>
             </TouchableOpacity>     
             
