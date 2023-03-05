@@ -27,32 +27,40 @@ export default function Restaurant2({ navigation }) {
 
     </View>
 
+          <Text></Text>
+
+      <ListItem> 
+      <ListItem.Content>
+      <ListItem.Title style={{alignSelf:"center"}}>
+      <Text style={styles.letrasTitulosRestaurantes}>Cantidad de reservas:</Text>                    
+      </ListItem.Title>
+      </ListItem.Content>
+      </ListItem>
+
     <View style={{flexDirection:"row", alignSelf:"center" }}>
 
-    <Condicional1 navigation={navigation} />
 
     <Condicional2 navigation={navigation} />
 
-    <Condicional3 navigation={navigation} />
 
-    <Condicional4 navigation={navigation} />
 
 
     </View>
 
 
 
-       <View>
+        <View>
 
       <Text>{"\n"}</Text>
+
       <ListItem> 
       <ListItem.Content>
       <ListItem.Title>
-      <Text style={styles.letrasTitulosRestaurantes}>Acerca de este restaurante:</Text>                    
+      <Text style={styles.letrasTitulosRestaurantes}>🍽Acerca de este restaurante:</Text>                    
       </ListItem.Title>
       <ListItem.Subtitle>
       <Text style={styles.letrasRestaurantes}>
-      Comida...         
+      Restaurante de comida rapida y de tipo familiar        
       </Text>       
       </ListItem.Subtitle>
       </ListItem.Content>
@@ -66,11 +74,12 @@ export default function Restaurant2({ navigation }) {
       <ListItem>
       <ListItem.Content>
       <ListItem.Title>
-      <Text style={styles.letrasTitulosRestaurantes}>Dirección</Text>         
+      <Text style={styles.letrasTitulosRestaurantes}>🗺Dirección</Text>         
       </ListItem.Title>
       <ListItem.Subtitle>
       <Text style={styles.letrasRestaurantes}>
-      El paraiso         
+      Av. El Ejército, entre Calle Madariaga y Av. Páez, 
+      Qta. Pizza King, El Paraíso, Caracas         
       </Text>                
       </ListItem.Subtitle>
       </ListItem.Content>
@@ -81,11 +90,11 @@ export default function Restaurant2({ navigation }) {
       <ListItem>
       <ListItem.Content>
       <ListItem.Title>
-      <Text style={styles.letrasTitulosRestaurantes}>Precio promedio</Text>         
+      <Text style={styles.letrasTitulosRestaurantes}>💲Precio promedio</Text>         
       </ListItem.Title>
       <ListItem.Subtitle>
       <Text style={styles.letrasRestaurantes}>
-      8984984         
+      30 USD
       </Text>                
       </ListItem.Subtitle>
       </ListItem.Content>
@@ -97,7 +106,7 @@ export default function Restaurant2({ navigation }) {
       <ListItem>
       <ListItem.Content>
       <ListItem.Title>
-      <Text style={styles.letrasTitulosRestaurantes}>Metodos de pago:</Text>                                  
+      <Text style={styles.letrasTitulosRestaurantes}>💸Metodos de pago:</Text>                                  
       </ListItem.Title>
       <ListItem.Subtitle>
       <Text style={styles.letrasRestaurantes}>
@@ -112,16 +121,31 @@ export default function Restaurant2({ navigation }) {
       <ListItem>
       <ListItem.Content>
       <ListItem.Title>
-      <Text style={styles.letrasTitulosRestaurantes}>Horario</Text>
+      <Text style={styles.letrasTitulosRestaurantes}>⏳Horario</Text>
       </ListItem.Title>
       <ListItem.Subtitle>
+
+      <View style={{flexDirection:"row"}}>
       <Text style={styles.letrasRestaurantes}>
-      Lunes:{"\n"}
-      Martes: {"\n"}
-      Miercoles:{"\n"}
-      Jueves:{"\n"}
-      Viernes:{"\n"}
-      </Text>            
+      Martes {"\n"}
+      Miércoles {"\n"}
+      Jueves {"\n"}
+      Viernes {"\n"}
+      Sábado {"\n"}
+      Domingo {"\n"}
+
+      </Text> 
+
+      <Text style={styles.letrasRestaurantes}>
+      11:00-21:00 {"\n"}
+      11:00-21:00 {"\n"}
+      11:00-21:00 {"\n"}
+      11:00-21:00 {"\n"}
+      11:00-21:00 {"\n"}
+      11:00-21:00 {"\n"}
+      </Text>
+
+      </View>       
       </ListItem.Subtitle>
       </ListItem.Content>
       </ListItem>
@@ -131,9 +155,9 @@ export default function Restaurant2({ navigation }) {
       </View>
 
 
-    </ScrollView>
-    
 
-   )
+      </ScrollView>
+
+
+      )
 }
-

@@ -73,6 +73,20 @@ const styles = StyleSheet.create({
       
     },
 
+    botonesFactura:{
+      borderWidth:1,
+      padding:10,
+      width:180,
+      height:40,
+      marginTop:10,
+      marginLeft:5,
+      justifyContent:"center",
+      alignItems:'center',
+      backgroundColor:"#ffffff",
+      
+    },
+
+
     textoReservas:{
 
       borderWidth:1,

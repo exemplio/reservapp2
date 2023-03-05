@@ -5,7 +5,8 @@ import { ScrollView } from "react-native-gesture-handler";
 import firebaseConfig from "../firebase-config";
 
 
-const UserScreen = (props) => {
+export default function UserScreen(){
+  
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
@@ -47,30 +48,11 @@ const UserScreen = (props) => {
   </View>
 
   </View>
+  
 
 
+return users;
 
-  return (
 
-    <View>
-
-    {users.map((user) => {
-      return (
-        <ListItem
-          key={user.id}
-          bottomDivider
-        >
-          <ListItem.Content>
-            <ListItem.Subtitle>
-              Cantidad de puestos disponibles: {user.puestos}
-              </ListItem.Subtitle>
-          </ListItem.Content>
-        </ListItem>
-      );
-    })}
-  </View>
-
-  );
 };
 
-export default UserScreen;
