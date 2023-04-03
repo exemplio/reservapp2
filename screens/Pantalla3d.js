@@ -56,7 +56,6 @@ CondicionalBack ({navigation});
     
         Correo: {email} {"\n"}
         Fecha de reserva:  {date}/{month}/{year} {"\n"}
-        Cantidad de reservas: ______ {"\n"}
         Restaurant: Puerkos Restaurant {"\n"}
   
             </ListItem.Subtitle>

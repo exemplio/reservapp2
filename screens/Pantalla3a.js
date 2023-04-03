@@ -56,7 +56,7 @@ CondicionalBack ({navigation});
     
         Correo: {email} {"\n"}
         Fecha de reserva:  {date}/{month}/{year} {"\n"}
-        Cantidad de reservas: ______ {"\n"}
+        
         Restaurant: El maracana {"\n"}
   
             </ListItem.Subtitle>
